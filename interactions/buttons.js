@@ -24,7 +24,7 @@ PermissionsBitField.Flags.Administrator
 return interaction.reply({
 
 content:
-"鉂� Sadece destek ekibi ticket kapatabilir.",
+"❌ Sadece destek ekibi ticket kapatabilir.",
 
 ephemeral:true
 
@@ -37,7 +37,7 @@ ephemeral:true
 await interaction.reply({
 
 content:
-"馃敀 Ticket 5 saniye i莽inde kapat谋lacak.",
+"🔒 Ticket 5 saniye içinde kapatılacak.",
 
 ephemeral:true
 
