@@ -1,22 +1,11 @@
-const {
-EmbedBuilder
-}=require("discord.js");
+module.exports = async (message) => {
 
-
-module.exports=(message)=>{
-
-
-const embed =
-new EmbedBuilder()
-
-.setColor("#00BFFF")
-
-.setDescription(`
-
+    const embed = new EmbedBuilder()
+        .setColor("#00BFFF")
+        .setDescription(`
 ╔════════════════════════════╗
           ⚔️ AEGİS NW ⚔️
 ╚════════════════════════════╝
-
 
 🌐 **JAVA SUNUCUSU**
 ━━━━━━━━━━━━━━━━━━━━
@@ -25,7 +14,6 @@ new EmbedBuilder()
 🟢 Durum   » Yakında
 📦 Sürüm   » 1.21.x
 
-
 📱 **BEDROCK SUNUCUSU**
 ━━━━━━━━━━━━━━━━━━━━
 
@@ -33,18 +21,14 @@ new EmbedBuilder()
 🔌 Port    » 19132
 🟢 Durum   » Yakında
 
-
 ━━━━━━━━━━━━━━━━━━━━
 
 💎 AEGİS NW'de seni bekliyoruz!
 🚀 Discord'umuzu takip et.
+`);
 
-`)
+    await message.channel.send({
+        embeds: [embed]
+    });
 
-
-message.channel.send({
-embeds:[embed]
-})
-
-
-}
+};
