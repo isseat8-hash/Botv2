@@ -1,34 +1,32 @@
+const { EmbedBuilder } = require("discord.js");
+
 module.exports = async (message) => {
+    try {
+        const embed = new EmbedBuilder()
+            .setColor("#00BFFF")
+            .setTitle("⚔️ AEGİS NW")
+            .addFields(
+                {
+                    name: "🌐 JAVA SUNUCUSU",
+                    value:
+                        "📡 **IP:** Yakında\n🟢 **Durum:** Yakında\n📦 **Sürüm:** 1.21.x",
+                },
+                {
+                    name: "📱 BEDROCK SUNUCUSU",
+                    value:
+                        "📡 **IP:** Yakında\n🔌 **Port:** 19132\n🟢 **Durum:** Yakında",
+                }
+            )
+            .setFooter({
+                text: "💎 AEGİS NW'de seni bekliyoruz!"
+            })
+            .setTimestamp();
 
-    const embed = new EmbedBuilder()
-        .setColor("#00BFFF")
-        .setDescription(`
-╔════════════════════════════╗
-          ⚔️ AEGİS NW ⚔️
-╚════════════════════════════╝
+        await message.channel.send({
+            embeds: [embed],
+        });
 
-🌐 **JAVA SUNUCUSU**
-━━━━━━━━━━━━━━━━━━━━
-
-📡 IP      » Yakında
-🟢 Durum   » Yakında
-📦 Sürüm   » 1.21.x
-
-📱 **BEDROCK SUNUCUSU**
-━━━━━━━━━━━━━━━━━━━━
-
-📡 IP      » Yakında
-🔌 Port    » 19132
-🟢 Durum   » Yakında
-
-━━━━━━━━━━━━━━━━━━━━
-
-💎 AEGİS NW'de seni bekliyoruz!
-🚀 Discord'umuzu takip et.
-`);
-
-    await message.channel.send({
-        embeds: [embed]
-    });
-
+    } catch (err) {
+        console.error("ip.js Hatası:", err);
+    }
 };
