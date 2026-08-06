@@ -1,6 +1,7 @@
 {
   "name": "aegis-nw",
   "version": "1.0.0",
+  "description": "AEGİS NW Discord Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -8,5 +9,8 @@
   "dependencies": {
     "discord.js": "^14.19.3",
     "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }
